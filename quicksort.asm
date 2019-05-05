@@ -1,11 +1,7 @@
-#studentName: Khalil Virji
-#studentID: 260768416
 
-# This MIPS program should sort a set of numbers using the quicksort algorithm
-# The program should use MMIO
 
 .data
-#any any data you need be after this line 
+
 buffer: .space 600
 testbuff: .asciiz "99 68 67 9 8 0 1 22 66 65" 
 array: 	.word 0:2048
@@ -22,7 +18,7 @@ error: "Invalid input program terminating"
 	.text
 	.globl main
 
-main:	# all subroutines you create must come below "main"
+main:	
 	la $a0,welcomeMessage
 	jal writetoMMIO
 	la $s0,array		#s0 is a pointer to the first free spot in the array 
